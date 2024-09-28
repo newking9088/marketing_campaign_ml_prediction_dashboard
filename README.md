@@ -40,8 +40,8 @@ This app allows you to predict whether a customer will subscribe to a term depos
 - **Virtual environment**: It's always a best practice to create a virtual environment for each individual project.
   
   Example of my project structure:
-  
-  marketing_campaign_ml_prediction_dashboard/   -- root directory
+```markdown  
+marketing_campaign_ml_prediction_dashboard/   -- root directory
 ├── .streamlit/
 │   └── config.toml
 ├── virtual_env/
@@ -52,6 +52,7 @@ This app allows you to predict whether a customer will subscribe to a term depos
 ├── clean_test_data.csv
 ├── requirements.txt
 └── ...
+```
 
 ### 2. Dependencies Management
 - **Freeze Dependencies**: Use `pip freeze > requirements.txt` to create a `requirements.txt` file. This ensures all necessary packages are installed in the cloud environment.
