@@ -1,5 +1,7 @@
 # Streamlit Dashboard for Customer Subscription Prediction
 
+<a href="https://testst-4neyqhlk2bjx6srapde5f9.streamlit.app/">Click here to view the App</a>
+
 ## Overview
 This dashboard demonstrates CI/CD of model deployment and ensures that the performance does not degrade over time, addressing model drift and other related issues.
 
