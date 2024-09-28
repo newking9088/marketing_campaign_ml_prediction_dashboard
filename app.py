@@ -1,10 +1,12 @@
+############################################################
+# import required libraries
 import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
 import os
-# import xgboost as xgb
 
+######################################################################
 # Get the current directory of the script
 current_dir = os.path.dirname(__file__)
 
@@ -14,7 +16,8 @@ model_path = os.path.join(current_dir, 'best_xgb.pkl')
 # Load the model from the pickle file
 with open(model_path, 'rb') as model_file:
     model = pickle.load(model_file)
-
+##################################################################################
+# Define helper functions
 # Function to make predictions
 def predict(data, threshold=0.29):
     probabilities = model.predict_proba(data)[:, 1]  # Probability of class 1
@@ -68,6 +71,10 @@ def create_final_report(row):
     | {row['Previously Subscribed?']} | {row['Has Defaulted?']} | {row['Prediction Outcome']} |
     """
     return report
+##################################################################################
+
+##################################################################################
+# set up sidebar and page layout
 
 # Set page configuration
 st.set_page_config(page_title="Predicting Term Deposit Subscription", layout="wide")
@@ -112,7 +119,7 @@ behavioral and other features. Follow the steps below to use the app:
      - **Age, Job, Marital Status, Education**: Key features displayed in a table format.
      - **Previously Subscribed?, Has Defaulted?, Prediction Outcome**: Additional details displayed in a table format.
 """)
-
+##################################################################################
 # Main panel for displaying test data and results
 if uploaded_file is not None:
     # Read the uploaded file
